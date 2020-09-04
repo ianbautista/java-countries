@@ -8,6 +8,7 @@ public class Country
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private long countryid;
     private String name;
     private long population;
     private long landmasskm2;
@@ -22,6 +23,17 @@ public class Country
     }
     // default constructor
     public Country() {
+    }
+
+    // getters and setters
+
+
+    public long getCountryid() {
+        return countryid;
+    }
+
+    public void setCountryid(long countryid) {
+        this.countryid = countryid;
     }
 
     public String getName() {
@@ -59,7 +71,8 @@ public class Country
     @Override
     public String toString() {
         return "Country{" +
-                "name='" + name + '\'' +
+                "countryid=" + countryid +
+                ", name='" + name + '\'' +
                 ", population=" + population +
                 ", landmasskm2=" + landmasskm2 +
                 ", medianage=" + medianage +
