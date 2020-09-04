@@ -32,7 +32,7 @@ Using the data.sql at the end, the endpoints will produce the following outputs.
 ### MVP
 
 <details>
-<summary>http://localhost:2019/names/all</summary>
+<summary>http://localhost:2020/names/all</summary>
 
 ```JSON
 [
@@ -1449,7 +1449,7 @@ Using the data.sql at the end, the endpoints will produce the following outputs.
 </details>
 
 <details>
-<summary>http://localhost:2019/names/start/u</summary>
+<summary>http://localhost:2020/names/start/u</summary>
 
 ```JSON
 [
@@ -1515,7 +1515,7 @@ Using the data.sql at the end, the endpoints will produce the following outputs.
 </details>
 
 <details>
-<summary>http://localhost:2019/population/total</summary>
+<summary>http://localhost:2020/population/total</summary>
 
 In the console
 
@@ -1532,7 +1532,7 @@ Status OK
 </details>
 
 <details>
-<summary>http://localhost:2019/population/min</summary>
+<summary>http://localhost:2020/population/min</summary>
 
 ```JSON
 {
@@ -1547,7 +1547,7 @@ Status OK
 </details>
 
 <details>
-<summary>http://localhost:2019/population/max</summary>
+<summary>http://localhost:2020/population/max</summary>
 
 ```JSON
 {
@@ -1564,7 +1564,7 @@ Status OK
 ### Stretch Goal
 
 <details>
-<summary>http://localhost:2019/population/median</summary>
+<summary>http://localhost:2020/population/median</summary>
 
 ```JSON
 {
@@ -1580,13 +1580,13 @@ Status OK
 
 The following URLs should return the requested data given the parameters
 
-* [ ] /names/all - return the names of all the countries alphabetically
-* [ ] /names/start/{letter} - return the countries alphabetically that begin with the given letter
+* [x] /names/all - return the names of all the countries alphabetically
+* [x] /names/start/{letter} - return the countries alphabetically that begin with the given letter
 
-* [ ] /population/total - return the total population of all countries in the console while returning Http Status OK as the response.
-* [ ] /population/min - return the country with the smallest population
-* [ ] /population/max - return the country with the largest population
+* [x] /population/total - return the total population of all countries in the console while returning Http Status OK as the response.
+* [x] /population/min - return the country with the smallest population
+* [x] /population/max - return the country with the largest population
 
 ### Stretch Goal
 
-* [ ] /population/median - return the country with the median population
+* [x] /population/median - return the country with the median population
