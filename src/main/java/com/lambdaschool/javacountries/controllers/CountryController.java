@@ -88,4 +88,15 @@ public class CountryController
         return new ResponseEntity<>(c, HttpStatus.OK);
     }
 
+    //http://localhost:2020/population/max
+    @GetMapping(value = "/population/max", produces = {"application/json"})
+    public ResponseEntity<?> maxPopulation()
+    {
+        List<Country> allCountryList = new ArrayList<>();
+        countryrepos.findAll().iterator().forEachRemaining(allCountryList::add);
+
+        allCountryList.sort((c1, c2) -> (int) (c1.getPopulation() - c2.getPopulation()));
+        Country c = allCountryList.get(allCountryList.size() -1);
+        return new ResponseEntity<>(c, HttpStatus.OK);
+    }
 }
